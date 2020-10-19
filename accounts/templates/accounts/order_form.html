@@ -1,0 +1,15 @@
+{% extends 'accounts/main.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid p-4">
+        <div class="row justify-content-center">
+            <div class="col-sm-6 card p-4">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
